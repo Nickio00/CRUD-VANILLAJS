@@ -1,0 +1,198 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #FAB832;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FC6441, #FAB832);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FAB832, #eddbb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    background-size: cover;
+    background-position: center;
+}
+
+ul{
+    background-color:#5158DD;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-wrap: wrap;
+ }
+
+ ul li{
+    list-style: none;
+ }
+
+ ul li a{
+    text-decoration: none;
+    color:#F2F2F2;
+    font-size:  22px;
+    display: block;
+    padding:15px 15px;
+    position:relative;
+ }
+
+ ul li a:before{ 
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:2px;
+    background-color: #FAB832;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s;
+ }
+
+ ul li a:after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 2px;
+    background-color:#FAB832;
+    transform: scaleX(0);
+    transform-origin:right;
+    transition:all 0.5s;
+ }
+
+ ul li a:hover{
+    color:#FAB832;
+ }
+
+ ul li a:hover::before, ul li a:hover::after{
+    transform:scaleX(1);
+ }
+
+.div-titulo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: white;
+}
+
+.div-titulo h1 {
+    font-weight: 300;
+}
+
+.contenedor {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+}
+
+
+.contenedor .div-formulario {
+    width: 30%;
+    height: 270px;
+    margin: 20px 20px;
+    background-color:#252525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 20px 0px 10px;
+}
+
+.contenedor .div-formulario h2 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    color:#FFFFFF;
+    background-color:#5158DD;
+    height:56px;
+    width: 105%;
+    padding:10px 40px 40px;
+    border-radius:20px 20px 0px 0px;
+}
+
+.contenedor .div-formulario form {
+    background-color:#FFFFFF;
+    border-radius: 0px 0px 20px 20px;
+    width: 105%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.contenedor .div-formulario form input,
+.contenedor .div-formulario form button {
+    width: 60%;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-color:#c2c4e9;
+}
+
+/* ESTILOS LISTADO DE ALUMNOS */
+.contenedor .div-listado {
+    width: 55%;
+    height: calc(100% - 50px);
+    margin: 15px 15px;
+    background-color:#5158DD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px 20px 20px 20px ;
+    box-shadow: 10px 10px 10px #000000;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.contenedor .div-listado h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+.contenedor .div-listado .div-empleados {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    padding: 0 30px;
+}
+
+.contenedor .div-listado .div-empleados p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+}
+
+.btn {
+    padding: 6px 10px;
+    border: none;
+    margin: 0 5px;
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+}
+
+.btn-editar {
+    background-color:#99CA9C;
+    font-family:fantasy;
+}
+
+.btn-eliminar {
+    background-color:#FF6464;
+    font-family: fantasy;
+}
